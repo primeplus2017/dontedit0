@@ -1,5 +1,5 @@
 <?php
-define('API_KEY','223161576:AAGAiYNA41HmWMJlMLgPjoPcJw_k4o3W5qo');
+define('API_KEY','294338105:AAGTR68HXb7MLIECXvIFH6Mr8BC4MqBp030');
 //----######------
 function makereq($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -92,9 +92,7 @@ var_dump(makereq('sendMessage',[
         	'chat_id'=>$update->message->chat->id,
         	'text'=>"سلــام 👋😉
 
-🔹 به سرویس پیام رسان تلگرام خوش آمدید 🌹.
-
-🔸 با استفاده از این سرویس شما میتوانید رباتی جهت ارائه پشتیبانی به کاربران ربات، کانال، گروه یا وبسایت خود ایجاد کنید.
+🔹 به سرویس ادیت نکن ساز تلگرام خوش آمدید 🌹.
 
 🔹برای ساخت ربات از دکمه ی 🔄 ساخت ربات استفاده نمایید.",
 		'parse_mode'=>'MarkDown',
@@ -181,7 +179,7 @@ $token = $textmessage ;
 		$source = str_replace("[*BOTTOKEN*]",$token,$source);
 		$source = str_replace("66443035",$from_id,$source);
 		save("bots/$un/index.php",$source);	
-		file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://app-53eb694e-3625-4b5c-a683-7f33e9f8ee3b.cleverapps.io/bots/$un/index.php");
+		file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://app-e87bee8c-35ea-4fd6-847d-7d1584c606a4.cleverapps.io/bots/$un/index.php");
 		SendMessage($chat_id,"🚀 ربات شما با موفقیت نصب شده است 
 
 [برای ورود به ربات خود کلیک کنید 😃](https://telegram.me/$un)");
@@ -215,10 +213,7 @@ fclose($myfile2);
 var_dump(makereq('sendMessage',[
         	'chat_id'=>$update->message->chat->id,
         	'text'=>"سلــام 👋😉
-
-🔹 به سرویس پیام رسان تلگرام خوش آمدید 🌹.
-
-🔸 با استفاده از این سرویس شما میتوانید رباتی جهت ارائه پشتیبانی به کاربران ربات، کانال، گروه یا وبسایت خود ایجاد کنید.
+🔹 به سرویس ادیت نکن ساز خوش آمدید 🌹.
 
 🔹برای ساخت ربات از دکمه ی 🔄 ساخت ربات استفاده نمایید.",
 		'parse_mode'=>'MarkDown',
