@@ -44,20 +44,24 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/DontEdit_BOT?startgroup=new";
+  $text = "سلام خوش آمدید \n\nمن را به گروه خود اضافه نمایید.";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
     'parse_mode'=>'html',
     'reply_markup'=>json_encode([
-      'inline_keyboard'=>[
+      'inline_keyboard'=>
         [
-          ['text'=>'Mr oYSoF','url'=>'https://telegram.me/oysof']
+        [
+        ['text'=>'Mr oYSoF','url'=>'https://telegram.me/oysof']
         ],
         [
-          ['text'=>'TGsoldier','url'=>'https://telegram.me/tgsoldierch']
+        ['text'=>'TGsoldier','url'=>'https://telegram.me/tgsoldierch']
+        ],
+        [
+        ['text'=>'پشتیبانی','url'=>'https://telegram.me/joinchat/EKlEE0B8n1S22Gfe1jR31A']
         ]
-      ]
+        ]
     ])
   ]);
 }elseif( $fadmin == $admin |  $fadmin == $admin2 and $update->message->text == '/stats'){
