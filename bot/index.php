@@ -54,8 +54,8 @@ if (isset($update->edited_message)){
       'inline_keyboard'=>
         [
         [
-          ['text'=>'سازنده','url'=>'https://telegram.me/oysof'],['text'=>'کانال','url'=>'https://telegram.me/tgsoldierch']
-        ]
+          ['text'=>'سازنده','url'=>'https://telegram.me/oysof'],['text'=>'کانال','url'=>'https://telegram.me/tgsoldierch'],
+        ],
         ]
     ])
   ]);
