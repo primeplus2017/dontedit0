@@ -31,7 +31,8 @@ if (isset($update->edited_message)){
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
   $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی: ".$jsu;
+  گفتی: "
+  .$jsu;
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -44,7 +45,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "سلام خوش آمدید \n\nمن را به گروه خود اضافه نمایید.";
+  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/DontEdit_BOT?startgroup=new";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -53,13 +54,8 @@ if (isset($update->edited_message)){
       'inline_keyboard'=>
         [
         [
-        ['text'=>'Mr oYSoF','url'=>'https://telegram.me/oysof']
+          ['text'=>'سازنده','url'=>'https://telegram.me/oysof'],['text'=>'کانال','url'=>'https://telegram.me/tgsoldierch']
         ],
-        [
-        ['text'=>'TGsoldier','url'=>'https://telegram.me/tgsoldierch']
-        ],
-        [
-        ['text'=>'پشتیبانی','url'=>'https://telegram.me/joinchat/EKlEE0B8n1S22Gfe1jR31A']
         ]
         ]
     ])
