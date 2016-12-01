@@ -55,7 +55,6 @@ if (isset($update->edited_message)){
         [
         [
           ['text'=>'سازنده','url'=>'https://telegram.me/oysof'],['text'=>'کانال','url'=>'https://telegram.me/tgsoldierch']
-        ],
         ]
         ]
     ])
